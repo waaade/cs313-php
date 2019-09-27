@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <p>Hello fools. Welcome to your demise. Hahahaha.</p>
+    </body>
         
 
 
