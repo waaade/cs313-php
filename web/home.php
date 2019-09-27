@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -17,6 +18,7 @@
         <h1>John's Website</h1>
         <div>
         <p>Hello fools. Welcome to your demise. Hahahaha.</p>
+        <img class="img-responsive" src="home.jpeg">
         </div>
     </body>
         
