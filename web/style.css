@@ -7,7 +7,11 @@ body {
 }
 
 div {
-    width: 75%;
+    width: 90%;
     margin: auto;
     background-color: gainsboro;
+}
+
+h1 {
+    margin: 5px;
 }
