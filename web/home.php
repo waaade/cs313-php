@@ -17,7 +17,12 @@
     <body>
         <h1>John's Website</h1>
         <div>
-        <p>Hello fools. Welcome to your demise. Hahahaha.</p>
+        <p>Welcome to my website. I'm John, a Brigham Young University-Idaho student 
+        majoring in software engineering.</p>
+        <p>I'm from the beautiful land of Colorado, USA.</p>
+        <p>Some things I like to do aside from software development are writing, playing guitar,
+        playing video games and reading manga. I also like hiking or doing anything outdoors.</p>
+        <p>Check out the projects on this website.</p> 
         <img class="img-responsive" src="home.jpeg">
         </div>
     </body>
