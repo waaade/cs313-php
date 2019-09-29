@@ -26,7 +26,7 @@
 </nav>
         <div>
         <img class="img-responsive" src="home.jpeg">
-        <h2>Hey there</h2>
+        <h2>Hey There!</h2>
         <p>Welcome to my website. I'm John, a Brigham Young University-Idaho student 
         majoring in software engineering.</p>
         <p>I'm from the beautiful land of Colorado, USA.</p>

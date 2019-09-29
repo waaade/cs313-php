@@ -3,10 +3,11 @@ p {
     font-size: 14pt;
     margin: 15px;
     text-align: center;
+    padding: 2%;
 }
 
 body {
-    background-color: rgb(85, 117, 204);
+    background-color: rgb(31, 71, 182);
 }
 
 div {
