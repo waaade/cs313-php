@@ -1,6 +1,8 @@
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 5px;
+    font-size: 14pt;
+    margin: 15px;
+    text-align: center;
 }
 
 body {
