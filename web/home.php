@@ -36,7 +36,7 @@
         <p><?php
         echo "The current server time is " . date("h:i:sa");
         ?></p>
-        <p onclick="this.innerHTML='Do you just do whatever people tell you?'">Click Me</p>
+        <p id="epicprank" onclick="this.innerHTML='Do you just do whatever people tell you?'">Click Me</p>
         </div>
     </body>
         
