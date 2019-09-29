@@ -26,12 +26,17 @@
 </nav>
         <div>
         <img class="img-responsive" src="home.jpeg">
+        <h2>Hey there</h2>
         <p>Welcome to my website. I'm John, a Brigham Young University-Idaho student 
         majoring in software engineering.</p>
         <p>I'm from the beautiful land of Colorado, USA.</p>
         <p>Some things I like to do aside from software development are writing, playing guitar,
         playing video games and reading manga. I also like hiking or doing anything outdoors.</p>
-        <p>Check out the projects on this website.</p> 
+        <p>Check out my projects by clicking "Assignments" on the navbar.</p>
+        <p><?php
+        echo "The current server time is " . date("h:i:sa");
+        ?></p>
+        <p onclick="this.innerHTML='Do you just do whatever people tell you?'">Click Me</p>
         </div>
     </body>
         
