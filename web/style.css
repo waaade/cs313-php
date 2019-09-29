@@ -7,13 +7,13 @@ p {
 }
 
 body {
-    background-color: rgb(86, 103, 148);
+    background-color: rgb(8, 26, 73);
 }
 
 div {
     width: 95%;
     margin: auto;
-    background-color: gainsboro;
+    background-color: rgb(221, 248, 248);
 }
 
 h1 {
