@@ -18,12 +18,8 @@
         <h1>John's Website</h1>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">John Larson</a>
-                </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="home.php">Home</a></li>
+                    <li class="active"><a href="home.php">Home</a></li>
                     <li><a href="assignments.php">Assignments</a></li>
                 </ul>
             </div>
