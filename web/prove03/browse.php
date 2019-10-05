@@ -54,7 +54,7 @@ session_start();
             <td><button onclick="addItem('Dr. Pepper', '$3.00')">Add To Cart</button></td>
         </tr>
     </table>
-    <button href="viewcart.php">View Cart
+    <button href="viewcart.php">View Cart</button>
     </div>
 </body>
 </html>
