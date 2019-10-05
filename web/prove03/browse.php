@@ -18,11 +18,11 @@ $_SESSION['cart'] = $myarray;
 </head>
 <script>
     function addItem(name, cost) {
-
+        let dataString = name + ' ' + cost;
         request = $.ajax({
             url: "itemhandler.php",
             type: "post",
-            data: name + " " + cost
+            data: dataString
         });
 
         request.done(function (response, textStatus, jqXHR){
