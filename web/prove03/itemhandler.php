@@ -1,4 +1,4 @@
 <?php
-//Add order item to order array. 
-array_push($_SESSION['order'], $_POST['data']);
+//Add item to cart array. 
+array_push($_SESSION['cart'], $_POST['data']);
 ?>

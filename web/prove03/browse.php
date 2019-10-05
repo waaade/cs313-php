@@ -26,9 +26,6 @@ session_start();
         request.done(function (response, textStatus, jqXHR){
             console.log("Request made");
         });
-});
-});
-
     }
 </script>
 <body>
