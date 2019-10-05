@@ -1,6 +1,6 @@
 <?php
 session_start();
-console.log($_POST["data"]);
 //Add item to cart array. 
-$_SESSION["cart"][] = $_POST["data"];
+$_SESSION["cart"][$_SESSION["count"]] = $_POST["data"];
+$_SESSION["count"] += 1;
 ?>

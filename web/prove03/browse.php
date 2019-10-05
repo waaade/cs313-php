@@ -2,6 +2,7 @@
 session_start();
 $myarray = array("Your cart:");
 $_SESSION['cart'] = $myarray;
+$_SESSION['count'] = 0;
 ?>
 <!DOCTYPE HTML>
 <html>
