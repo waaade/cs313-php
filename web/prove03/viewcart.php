@@ -5,8 +5,8 @@ session_start();
 <html>
 <body>
 <?php
-foreach ($_SESSION['cart'] as $value) {
-    echo $value, '<br>';
+foreach ($_SESSION["cart"] as $value) {
+    echo $value, "<br>";
 }
 ?>
 </body>
