@@ -31,29 +31,30 @@ session_start();
 <body>
     <div>
     <h1>The Soda Store</h1>
-    <p>I will personally bring your order to your house.</p>
+    <p>I will personally bring your order to your house.😉</p>
     <table>
         <tr>
             <td>Coke</td>
             <td>$1,000,000</td>
-            <td><button onclick="addItem('Coca-Cola', 2.00)">Add To Cart</button></td>
+            <td><button onclick="addItem('Coca-Cola', '$2.00')">Add To Cart</button></td>
         </tr>
         <tr>
             <td>Sprite</td>
             <td>A million</td>
-            <td><button onclick="addItem('Sprite', 2.50)">Add To Cart</button></td>
+            <td><button onclick="addItem('Sprite', '$2.50')">Add To Cart</button></td>
         </tr>
         <tr>
             <td>Stuff</td>
             <td>I'm stuff</td>
-            <td><button onclick="addItem('Diet Coke', 2.00)">Your girlfriend's awesome</button></td>
+            <td><button onclick="addItem('Diet Coke', '$2.00')">Your girlfriend's awesome</button></td>
         </tr>
         <tr>
             <td>Dr. Pepper</td>
             <td>$3.00</td>
-            <td><button onclick="addItem('Dr. Pepper', 3.00)">Add To Cart</button></td>
+            <td><button onclick="addItem('Dr. Pepper', '$3.00')">Add To Cart</button></td>
         </tr>
     </table>
+    <button href="viewcart.php">View Cart
     </div>
 </body>
 </html>
