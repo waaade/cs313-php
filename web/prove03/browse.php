@@ -31,7 +31,7 @@ $_SESSION['cart'] = $myarray;
         });
         request.fail(function (jqXHR, textStatus, errorThrown){
         console.error(textStatus, errorThrown);
-    };
+        });
     };
 </script>
 <body>
