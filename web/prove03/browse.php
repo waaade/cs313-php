@@ -18,7 +18,7 @@ session_start();
     function addItem(name, cost) {
 
         request = $.ajax({
-            url: "/itemhandler.php",
+            url: "itemhandler.php",
             type: "post",
             data: name + " " + cost
         });
