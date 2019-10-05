@@ -6,7 +6,7 @@ session_start();
 <body>
 <?php
 foreach ($_SESSION['cart'] as $value) {
-    echo "$value <br>";
+    echo $value . "<br>";
 }
 ?>
 </body>
