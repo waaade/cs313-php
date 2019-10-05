@@ -8,6 +8,7 @@ session_start();
 foreach ($_SESSION['cart'] as $value) {
     echo $value . "<br>";
 }
+echo $_SESSION['cart'][1];
 ?>
 </body>
 </html>
