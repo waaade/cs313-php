@@ -5,9 +5,7 @@ session_start();
 <html>
 <body>
 <?php
-foreach ($_SESSION["cart"] as $value) {
-    echo $value;
-}
+var_dump($_SESSION['cart']);
 ?>
 </body>
 </html>
