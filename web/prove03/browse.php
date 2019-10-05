@@ -1,5 +1,7 @@
 <?php
 session_start();
+$myarray = array("Your cart:");
+$_SESSION['cart'] = $myarray;
 ?>
 <!DOCTYPE HTML>
 <html>
