@@ -14,25 +14,49 @@ session_start();
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+<script>
+    function addItem(name, cost) {
+
+        request = $.ajax({
+            url: "/itemhandler.php",
+            type: "post",
+            data: name + " " + cost
+        });
+
+        request.done(function (response, textStatus, jqXHR){
+            console.log("Request made");
+        });
+});
+});
+
+    }
+</script>
 <body>
+    <div>
     <h1>The Soda Store</h1>
+    <p>I will personally bring your order to your house.</p>
     <table>
         <tr>
             <td>Coke</td>
             <td>$1,000,000</td>
-            <td><button>Add To Cart</button></td>
+            <td><button onclick="addItem('Coca-Cola', 2.00)">Add To Cart</button></td>
         </tr>
         <tr>
             <td>Sprite</td>
             <td>A million</td>
-            <td><button>Add To Cart</button></td>
-            <td><button>Remove</button></td>
+            <td><button onclick="addItem('Sprite', 2.50)">Add To Cart</button></td>
         </tr>
         <tr>
             <td>Stuff</td>
             <td>I'm stuff</td>
-            <td><button>Your girlfriend's awesome</button></td>
-            <td><button>Remove</button></td>
+            <td><button onclick="addItem('Diet Coke', 2.00)">Your girlfriend's awesome</button></td>
         </tr>
+        <tr>
+            <td>Dr. Pepper</td>
+            <td>$3.00</td>
+            <td><button onclick="addItem('Dr. Pepper', 3.00)">Add To Cart</button></td>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
