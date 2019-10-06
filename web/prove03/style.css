@@ -4,15 +4,19 @@ div {
 }
 
 body {
-    background-color: rgb(150, 26, 51);
+    background-color: rgb(31, 34, 216);
     margin: 10px;
 }
 
 a {
-    size: 32pt;
+    font-size: 24pt;
 }
 
 #added {
     color: orange;
-    size: 20pt;
+    font-size: 20pt;
+}
+
+h1 {
+    text-align: center;
 }
