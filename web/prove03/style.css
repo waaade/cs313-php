@@ -4,11 +4,14 @@ div {
 }
 
 body {
-    background-color: rgb(145, 146, 226);
+    background-color: rgb(145, 183, 226);
 }
 
 a {
     font-size: 18pt;
+}
+
+p {
     margin: 10px;
 }
 
