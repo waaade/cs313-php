@@ -21,7 +21,7 @@ $_SESSION['cart'] = $myarray;
         let dataString = name + ' ' + cost;
         console.log(dataString);
         request = $.ajax({
-            url: "itemhandler.php",
+            url: "itemhandler.php?q=",
             type: "post",
             data: dataString
         });
