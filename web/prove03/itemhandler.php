@@ -1,6 +1,6 @@
 <?php
 session_start();
 //Add item to cart array. 
-$name = $_POST['data'];
+$name = $_REQUEST["q"];
 $_SESSION[$name] = 1;
 ?>

@@ -20,18 +20,14 @@ $_SESSION['cart'] = $myarray;
     function addItem(name, cost) {
         let dataString = name + ' ' + cost;
         console.log(dataString);
-        request = $.ajax({
-            url: "itemhandler.php?q=",
-            type: "post",
-            data: dataString
-        });
-
-        request.done(function (response, textStatus, jqXHR){
-            console.log("Request made");
-        });
-        request.fail(function (jqXHR, textStatus, errorThrown){
-        console.error(textStatus, errorThrown);
-        });
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+    xmlhttp.open("GET", "itemhandler.php?q=" + dataString, true);
+    xmlhttp.send();
     };
 </script>
 <body>
