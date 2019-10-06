@@ -5,7 +5,7 @@ session_start();
 <html>
 <body>
 <?php
-var_dump($_SESSION['cart']);
+var_dump($_SESSION);
 ?>
 </body>
 </html>
