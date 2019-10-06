@@ -26,8 +26,9 @@ $_SESSION['cart'] = $myarray;
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-    xmlhttp.open("GET", "itemhandler.php?q=" + dataString, true);
-    xmlhttp.send();
+        xmlhttp.open("GET", "itemhandler.php?q=" + dataString, true);
+        xmlhttp.send();
+        document.getElementById("added").innerHTML=name + " added to cart.";
     };
 </script>
 <body>
@@ -56,6 +57,7 @@ $_SESSION['cart'] = $myarray;
             <td><button onclick="addItem('Dr. Pepper', '$3.00')">Add To Cart</button></td>
         </tr>
     </table>
+    <p id="added"></p>
     <a href="viewcart.php">View Cart</a>
     </div>
 </body>
