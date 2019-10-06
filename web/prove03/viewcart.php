@@ -4,7 +4,6 @@ session_start();
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
     <title>Your Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Bootstrap -->
@@ -14,6 +13,7 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
@@ -21,7 +21,8 @@ session_start();
     <h2>Your Cart</h2>
     <?php
     foreach($_SESSION['cart'] as $value) {
-        echo $value . "<br>";
+        echo $value;
+        echo "<button onclick='remove();'>Remove</button><br>"
     }
     ?>
     <a href="checkout.php">Checkout</a>
