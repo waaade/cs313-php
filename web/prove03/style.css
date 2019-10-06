@@ -4,17 +4,17 @@ div {
 }
 
 body {
-    background-color: rgb(31, 34, 216);
-    margin: 10px;
+    background-color: rgb(145, 146, 226);
 }
 
 a {
-    font-size: 24pt;
+    font-size: 18pt;
+    margin: 10px;
 }
 
 #added {
     color: orange;
-    font-size: 20pt;
+    font-size: 14pt;
 }
 
 h1 {
