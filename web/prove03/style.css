@@ -5,10 +5,11 @@ div {
 
 body {
     background-color: rgb(150, 26, 51);
+    margin: 10px;
 }
 
 a {
-    size: 24pt;
+    size: 32pt;
 }
 
 #added {
