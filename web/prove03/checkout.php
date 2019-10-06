@@ -19,7 +19,7 @@ session_start();
     <h2>Complete Your Order</h2>
     <body>
     <div>
-        <form action="confirmation.php">
+        <form method="post" action="confirmation.php">
         Name: <input type="text" name="name"><br>
         Address: <input type="text" name="address"><br>
         State: <input type="text" name="website"><br>
