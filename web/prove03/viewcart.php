@@ -5,7 +5,9 @@ session_start();
 <html>
 <body>
 <?php
-var_dump($_SESSION);
+foreach($_SESSION['cart'] as $value) {
+    echo $value . "<br>";
+}
 ?>
 </body>
 </html>
