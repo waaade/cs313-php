@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "dbConnect.php";
 $db = get_db();
 ?>
@@ -21,14 +22,15 @@ $db = get_db();
         <p>Know the best places to eat, shop, and have fun in and around Rexburg, Idaho. Help out the community.</p>
         <div>
         <h2>See Places in these categories:</h2>
-        <ul>
-            <li><a>Restaurants</a></li>
-            <li><a>Parks/Trails</a></li>
-            <li><a>Recreation</a></li>
-            <li><a>Stores</a></li>
-        </ul>
+        <form action="typesearch.php" method="post">
+            <input type="radio" name="type" value="Restaurants">Restaurants
+            <input type="radio" name="type" value="Parks/Trails">Parks/Trails<br>
+            <input type="radio" name="type" value="Recreation">Recreation
+            <input type="radio" name="type" value="Stores">Stores</a></li>
+            <input type="submit" value="Go">
+        </form>
         <br>
-        <h2>Search for a Place</h2>
+        <h2>Search for a Place by name</h2>
         </div>
         <?php
         foreach ($db->query('SELECT email, password FROM users') as $row)
