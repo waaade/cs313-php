@@ -26,7 +26,7 @@ $db = get_db();
             <input type="radio" name="type" value="Restaurants">Restaurants
             <input type="radio" name="type" value="Parks/Trails">Parks/Trails<br>
             <input type="radio" name="type" value="Recreation">Recreation
-            <input type="radio" name="type" value="Stores">Stores</a></li>
+            <input type="radio" name="type" value="Stores">Stores<br>
             <input type="submit" value="Go">
         </form>
         <br>
