@@ -1,4 +1,6 @@
 <?php
+require "dbConnect.php";
+$db = get_db();
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -28,5 +30,13 @@
         <br>
         <h2>Search for a Place</h2>
         </div>
+        <?php
+        foreach ($db->query('SELECT username, password FROM users') as $row)
+        {
+          echo 'user: ' . $row['username'];
+          echo ' password: ' . $row['password'];
+          echo '<br/>';
+        }
+        ?>
     </body>
 </html>
