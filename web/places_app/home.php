@@ -31,9 +31,9 @@ $db = get_db();
         <h2>Search for a Place</h2>
         </div>
         <?php
-        foreach ($db->query('SELECT username, password FROM users') as $row)
+        foreach ($db->query('SELECT email, password FROM users') as $row)
         {
-          echo 'user: ' . $row['username'];
+          echo 'user: ' . $row['email'];
           echo ' password: ' . $row['password'];
           echo '<br/>';
         }
