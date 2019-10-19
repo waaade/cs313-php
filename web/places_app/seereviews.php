@@ -33,7 +33,9 @@ $db = get_db();
         }
     ?>
     <a href="home.php">Back</a>
-    <p>Coming soon: Leave a review</p>
+    <?php
+    echo '<p>Coming soon: <a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
+    ?>
     </div>
 </body>
 </html>
