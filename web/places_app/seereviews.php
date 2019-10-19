@@ -18,6 +18,7 @@ $db = get_db();
 </head>
 <body>
     <h1>Rexburg Places</h1>
+    <div>
     <h3>Reviews for selected location</h3>
     <?php
         $id = htmlspecialchars(trim($_GET['placeid']));
@@ -33,5 +34,6 @@ $db = get_db();
     ?>
     <a href="home.php">Back</a>
     <p>Coming soon: Leave a review</p>
+    </div>
 </body>
 </html>
