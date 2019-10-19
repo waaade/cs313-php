@@ -29,6 +29,9 @@ session_start();
         </form>
         <br>
         <h2>Search for a Place by name</h2>
+        <form action="namesearch.php" method="post">
+            Type Name: <input type="text" name="search">
+            <input type="submit" value="Go">
         </div>
     </body>
 </html>
