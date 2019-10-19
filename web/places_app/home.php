@@ -17,7 +17,7 @@ session_start();
     </head>
     <body>
         <h1>Rexburg Places</h1>
-        <p>Know the best places to eat, shop, and have fun in and around Rexburg, Idaho. Help out the community.</p>
+        <p id="desc">Know the best places to eat, shop, and have fun in and around Rexburg, Idaho. Help out the community.</p>
         <div>
         <h2>See Places in these categories:</h2>
         <form action="typesearch.php" method="post">

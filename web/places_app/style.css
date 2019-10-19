@@ -4,5 +4,15 @@ body {
 
 div {
     background-color: white;
-    margin: 5%;
+    margin: 3%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#desc {
+    text-align: center;
+    color: white;
 }
