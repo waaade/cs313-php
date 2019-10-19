@@ -8,7 +8,7 @@ $db = get_db();
 </head>
 <body>
     <?php
-        $id = htmlspecialchars(trim($_GET['places_id']));
+        $id = htmlspecialchars(trim($_GET['placeid']));
         $stmt = $db->prepare('SELECT * FROM reviews WHERE place=:id');
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
