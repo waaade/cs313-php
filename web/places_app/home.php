@@ -30,8 +30,13 @@ session_start();
         <br>
         <h2>Search for a Place by name</h2>
         <form action="namesearch.php" method="post">
-            Type Name: <input type="text" name="search">
+            Enter name: <input type="text" name="search">
             <input type="submit" value="Go">
+        </form>
+        <h2>Create an Account and Add Places</h2>
+        <p>Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
+        Create an account and start contributing today!</p>
+        Coming Soon
         </div>
     </body>
 </html>
