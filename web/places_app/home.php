@@ -1,7 +1,5 @@
 <?php
 session_start();
-require "dbConnect.php";
-$db = get_db();
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -32,13 +30,5 @@ $db = get_db();
         <br>
         <h2>Search for a Place by name</h2>
         </div>
-        <?php
-        foreach ($db->query('SELECT email, password FROM users') as $row)
-        {
-          echo 'user: ' . $row['email'];
-          echo ' password: ' . $row['password'];
-          echo '<br/>';
-        }
-        ?>
     </body>
 </html>
