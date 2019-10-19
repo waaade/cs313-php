@@ -18,15 +18,16 @@ $db = get_db();
 </head>
 <body>
 <h1>Rexburg Places</h1>
-<h2>Results of your category search</h2>
+<h3>Results of your category search</h3>
 <?php
     $type = htmlspecialchars(trim($_POST['type']));
     foreach ($db->query("SELECT * FROM places 
     WHERE places_type=(SELECT types_id FROM types WHERE name='$type')", PDO::FETCH_ASSOC) as $row)
     {
-        echo $row['name'] . '<br>' . $row['address'] . '<br>' . 
+        echo '<h4>' . $row['name'] . '</h4><br>' . $row['address'] . '<br>' . 
         '<a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>
+<a href="home.php">Back</a>
 </body>
 </html>

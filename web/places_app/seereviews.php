@@ -31,5 +31,6 @@ $db = get_db();
         }
     ?>
     <a href="home.php">Back</a>
+    <p>Coming soon: Leave a review</p>
 </body>
 </html>
