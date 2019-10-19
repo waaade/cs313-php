@@ -20,7 +20,7 @@
                     <li><a href="assignments.php">Assignments</a></li>
                 </ul>
             </div>
-    <h1>My Assignments</h1>
+    <h2>My Assignments</h2>
     <div>
     <ul>
     <li><a href="prove03/browse.php">Shopping Cart</a></li>

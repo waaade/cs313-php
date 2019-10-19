@@ -19,6 +19,7 @@ $db = get_db();
 </head>
 <body>
 <h1>Rexburg Places</h1>
+<div>
 <h3>Results of your search</h3>
 <?php
     $name = htmlspecialchars(trim($_POST['search']));
@@ -29,5 +30,6 @@ $db = get_db();
     }
 ?>
 <p><a href="home.php">Back</a></p>
+</div>
 </body>
 </html>

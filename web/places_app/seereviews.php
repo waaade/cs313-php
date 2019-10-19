@@ -18,7 +18,7 @@ $db = get_db();
 </head>
 <body>
     <h1>Rexburg Places</h1>
-    <h2>Reviews for selected location</h2>
+    <h3>Reviews for selected location</h3>
     <?php
         $id = htmlspecialchars(trim($_GET['placeid']));
         $stmt = $db->prepare('SELECT * FROM reviews WHERE place=:id');
