@@ -14,9 +14,9 @@ $db = get_db();
         $stmt->execute();
 
         $reviews = $stmt->fetchAll();
-
+        
         foreach ($reviews as $row) {
-            echo $reviews['reviews_date'] . '<br>Score: ' . $reviews['score'] . '<br><p>' . $reviews['comment'] . '<p><br>';
+            echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '<br><p>' . $row['comment'] . '<p><br>';
         }
     ?>
 </body>
