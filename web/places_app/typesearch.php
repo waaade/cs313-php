@@ -24,10 +24,10 @@ $db = get_db();
     foreach ($db->query("SELECT * FROM places 
     WHERE places_type=(SELECT types_id FROM types WHERE name='$type')", PDO::FETCH_ASSOC) as $row)
     {
-        echo '<h4>' . $row['name'] . '</h4><br>' . $row['address'] . '<br>' . 
+        echo '<h4>' . $row['name'] . '</h4><br>' . $row['address'] . 
         '<a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>
-<a href="home.php">Back</a>
+<p><a href="home.php">Back</a></p>
 </body>
 </html>
