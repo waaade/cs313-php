@@ -9,9 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo 'You said ' . $comment;
 
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
-    VALUES(SELECT places_id FROM places WHERE name = :place, 
+    VALUES(SELECT places_id FROM places WHERE name = ":place", 
     SELECT CURRENT_DATE,
-    SELECT users_id FROM users WHERE name = :username,
+    SELECT users_id FROM users WHERE name = ":username",
     :score,
     :comment)';
     $stmt = $this->pdo->prepare($sql);
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':comment', $comment);
     
     $stmt->execute();
-    
+
 }
 ?>
 <!DOCTYPE html>
