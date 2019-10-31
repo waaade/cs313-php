@@ -32,17 +32,17 @@ $db = get_db();
         ?>
         <form action="submitreview.php" method="POST">
         Select a rating:<br>
-        <input type="radio" name="rating" value="1">1
-        <input type="radio" name="rating" value="2">2
-        <input type="radio" name="rating" value="3">3
-        <input type="radio" name="rating" value="4">4
-        <input type="radio" name="rating" value="5">5<br>
-        <textarea name="content" id="content" placeholder="Give your thoughts here">
+        <input type="radio" name="rating" value="1" required>1
+        <input type="radio" name="rating" value="2" required>2
+        <input type="radio" name="rating" value="3" required>3
+        <input type="radio" name="rating" value="4" required>4
+        <input type="radio" name="rating" value="5" required>5<br>
+        Leave your thoughts:<br><textarea name="content" id="content" required>
         
       
 
-        </textarea>
-        <input type="submit" value="submit">
+        </textarea><br>
+        <input type="submit" value="Submit">
         </form>
         </div>
     </body>
