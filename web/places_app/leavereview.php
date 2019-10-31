@@ -1,6 +1,7 @@
 <?php
 require "dbConnect.php";
 $db = get_db();
+//TODO: Make it so you can only leave a review if you're logged in
 ?>
 <!DOCTYPE HTML>
 <html>

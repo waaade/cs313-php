@@ -8,13 +8,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $place = $_POST["name"];
     echo 'You said ' . $comment;
 
-    $db->query("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) VALUES
-    ( SELECT places_id FROM places WHERE name = '$place'
-    , SELECT CURRENT_DATE
-    , SELECT users_id FROM users WHERE name = 'johnny'
-    , '$score'
-    , '$comment'
-    )");
+    $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
+    VALUES(SELECT places_id FROM places WHERE name = :place, 
+    SELECT CURRENT_DATE,
+    SELECT users_id FROM users WHERE name = :username,
+    :score,
+    :comment)';
+    $stmt = $this->pdo->prepare($sql);
+    
+    $stmt->bindValue(':place', $place);
+    $username = 'johnny';
+    $stmt->bindValue(':username', $username);
+    $stmt->bindValue(':score', $score);
+    $stmt->bindValue(':comment', $comment);
+    
+    $stmt->execute();
+    
 }
 ?>
 <!DOCTYPE html>
