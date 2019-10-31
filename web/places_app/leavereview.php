@@ -25,8 +25,8 @@ $db = get_db();
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
-        $reviews = $stmt->fetchAll();
-        foreach ($ as $row) {
+        $name= $stmt->fetchAll();
+        foreach ($name as $row) {
             echo 'Leave Review for ' . $row['name'] . '<br>';
         }
         ?>
