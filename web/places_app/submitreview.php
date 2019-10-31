@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         :comment)';
     $stmt = $this->pdo->prepare($sql);
     
-    $stmt->bindValue(':place', $place);
+    $stmt->bindValue(':place', "'" . $place . "'");
     $username = 'johnny';
-    $stmt->bindValue(':username', $username);
+    $stmt->bindValue(':username', "'" . $username . "'");
     $stmt->bindValue(':score', $score);
     $stmt->bindValue(':comment', $comment);
     
