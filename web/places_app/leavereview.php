@@ -37,11 +37,11 @@ $db = get_db();
         <form action="submitreview.php" method="POST">
         <?php echo '<input type="text" name="name" value="' . $theName . '" readonly><br>';?>
         Select a rating:<br>
-        <input type="radio" name="rating" value="1" required>1
-        <input type="radio" name="rating" value="2" required>2
-        <input type="radio" name="rating" value="3" required>3
-        <input type="radio" name="rating" value="4" required>4
-        <input type="radio" name="rating" value="5" required>5<br>
+        <input type="radio" name="rating" value=1 required>1
+        <input type="radio" name="rating" value=2 required>2
+        <input type="radio" name="rating" value=3 required>3
+        <input type="radio" name="rating" value=4 required>4
+        <input type="radio" name="rating" value=5 required>5<br>
         Leave your thoughts:<br><textarea name="content" id="content" required></textarea><br>
         <input type="submit" value="Submit">
         </form>
