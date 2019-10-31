@@ -37,11 +37,7 @@ $db = get_db();
         <input type="radio" name="rating" value="3" required>3
         <input type="radio" name="rating" value="4" required>4
         <input type="radio" name="rating" value="5" required>5<br>
-        Leave your thoughts:<br><textarea name="content" id="content" required>
-        
-      
-
-        </textarea><br>
+        Leave your thoughts:<br><textarea name="content" id="content" required></textarea><br>
         <input type="submit" value="Submit">
         </form>
         </div>
