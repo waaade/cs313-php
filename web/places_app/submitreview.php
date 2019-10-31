@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ( (SELECT places_id FROM places WHERE name = '$place')
     , (SELECT CURRENT_DATE)
     , (SELECT users_id FROM users WHERE name = 'johnny')
-    , $score
+    , '$score'
     , '$comment'
     )");
 }
