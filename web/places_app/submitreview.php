@@ -5,11 +5,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $score = $_POST["rating"];
     $comment = $_POST["content"];
+    $place = $_POST["name"];
     
 
-    $db->query("INSERT INTO reviews (reviews_date, reviews_user, score, comment) VALUES
-    ( (SELECT CURRENT_DATE)
-    , (SELECT users_id WHERE name = 'johnny')
+    $db->query("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) VALUES
+    ( (SELECT places_id FROM places WHERE name = '$place')
+    , (SELECT CURRENT_DATE)
+    , (SELECT users_id FROM users WHERE name = 'johnny')
     , $score
     , '$comment'
     )");

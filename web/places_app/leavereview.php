@@ -24,13 +24,17 @@ $db = get_db();
         $stmt = $db->prepare('SELECT name FROM places WHERE places_id=:id');
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+        $name = "";
 
         $name= $stmt->fetchAll();
         foreach ($name as $row) {
             echo 'Leave Review for ' . $row['name'] . '<br>';
+            $theName = $row['name'];
         }
         ?>
+        
         <form action="submitreview.php" method="POST">
+        <?php echo '<input type="text" name="name" value="' . $theName . '" readonly><br>';?>
         Select a rating:<br>
         <input type="radio" name="rating" value="1" required>1
         <input type="radio" name="rating" value="2" required>2
