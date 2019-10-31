@@ -1,3 +1,7 @@
+<?php
+require "dbConnect.php";
+$db = get_db();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,7 +19,31 @@
     <body>
         <h1>Rexburg Places</h1>
         <div>
-        <p>You will be able to leave a review here.</p>
+        <?php
+        $id = htmlspecialchars(trim($_GET['placeid']));
+        $stmt = $db->prepare('SELECT name FROM places WHERE places_id=:id');
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $reviews = $stmt->fetchAll();
+        foreach ($ as $row) {
+            echo 'Leave Review for ' . $row['name'] . '<br>';
+        }
+        ?>
+        <form action="submitreview.php" method="POST">
+        Select a rating:<br>
+        <input type="radio" name="rating" value="1">1
+        <input type="radio" name="rating" value="2">2
+        <input type="radio" name="rating" value="3">3
+        <input type="radio" name="rating" value="4">4
+        <input type="radio" name="rating" value="5">5<br>
+        <textarea name="content" id="content" placeholder="Give your thoughts here">
+        
+      
+
+        </textarea>
+        <input type="submit" value="submit">
+        </form>
         </div>
     </body>
 </html>
