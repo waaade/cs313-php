@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 
     $db->query("INSERT INTO reviews (reviews_date, reviews_user, score, comment) VALUES
-    ( SELECT CURRENT_DATE
-    , 'Defaulticus'
+    ( (SELECT CURRENT_DATE)
+    , (SELECT users_id WHERE name = 'johnny')
     , $score
     , '$comment'
     )");
