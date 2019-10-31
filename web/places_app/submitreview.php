@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $comment = $_POST["content"];
     $place = $_POST["name"];
     var_dump($_POST);
+    var_dump ($score);
 
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES(
