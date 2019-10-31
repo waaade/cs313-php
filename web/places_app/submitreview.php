@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES(
-        (SELECT places_id FROM places WHERE name = ":place"), 
+        (SELECT places_id FROM places WHERE name = :place), 
         (SELECT CURRENT_DATE),
-        (SELECT users_id FROM users WHERE name = ":username"),
+        (SELECT users_id FROM users WHERE name = :username),
         :score,
         :comment)';
     $stmt = $this->pdo->prepare($sql);
