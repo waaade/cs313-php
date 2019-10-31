@@ -3,7 +3,7 @@ require "dbConnect.php";
 $db = get_db();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $score = $_POST["rating"];
+    $score = (is_numeric($_POST["rating"]) ? (int)$_POST["rating"] : 0);
     $comment = $_POST["content"];
     $place = $_POST["name"];
     var_dump($_POST);
