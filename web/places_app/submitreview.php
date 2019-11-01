@@ -12,14 +12,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':place', $place);
     $stmt->execute();
 
-    $placeId = $stmt->fetch();
+    $result = $stmt->fetch();
+    $placeId = $result["places_id"];
     var_dump($placeId);
 
     $stmt = $db->prepare('SELECT users_id FROM users WHERE name = :username'); 
     $stmt->bindValue(':username', $username);
     $stmt->execute();
 
-    $userId = $stmt->fetch();
+    $result = $stmt->fetch();
+    $userId = $result["users_id"];
     var_dump($userId);
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
