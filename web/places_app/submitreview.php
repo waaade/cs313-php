@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $stmt = $db->prepare('SELECT CURRENT_DATE');
     $stmt->execute();
-    $date = $stmt->fetch();
+    $result = $stmt->fetch();
+    $date = $result["current_date"];
     var_dump($date);
 
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
