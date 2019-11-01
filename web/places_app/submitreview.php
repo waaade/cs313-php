@@ -8,19 +8,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $place = $_POST["name"];
     var_dump($_POST);
     var_dump ($score);
+    $username = 'johnny';
+
+    $stmt = $db->prepare('SELECT places_id FROM places WHERE name = :place');
+    $stmt->bindValue(':place', $place);
+    $stmt->execute();
+
+    $placeId = $stmt->fetchAll();
+
+    $stmt = $db->prepare('SELECT users_id FROM users WHERE name = :username'); 
+    $stmt->bindValue(':username', $username);
+    $stmt->execute();
+
+    $userId = $stmt->fetchAll();
 
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
-    VALUES(
-        (SELECT places_id FROM places WHERE name = :place), 
+    VALUES (
+        :place, 
         (SELECT CURRENT_DATE),
-        (SELECT users_id FROM users WHERE name = :username),
+        :username
         :score,
         :comment)';
+
     $stmt = $this->pdo->prepare($sql);
     
-    $stmt->bindValue(':place', "'" . $place . "'");
-    $username = 'johnny';
-    $stmt->bindValue(':username', "'" . $username . "'");
+    $stmt->bindValue(':place', $placeId);
+    
+    $stmt->bindValue(':username', $userId);
     $stmt->bindValue(':score', $score);
     $stmt->bindValue(':comment', $comment);
     
