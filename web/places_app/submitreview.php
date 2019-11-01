@@ -6,8 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $score = (is_numeric($_POST["rating"]) ? (int)$_POST["rating"] : 0);
     $comment = $_POST["content"];
     $place = $_POST["name"];
-    var_dump($_POST);
-    var_dump ($score);
     $username = 'johnny';
 
     $stmt = $db->prepare('SELECT places_id FROM places WHERE name = :place');
@@ -15,13 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
 
     $placeId = $stmt->fetchAll();
+    var_dump($placeId);
 
     $stmt = $db->prepare('SELECT users_id FROM users WHERE name = :username'); 
     $stmt->bindValue(':username', $username);
     $stmt->execute();
 
     $userId = $stmt->fetchAll();
-
+    var_dump($userId);
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
         :place, 
