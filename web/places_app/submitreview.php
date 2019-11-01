@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
 
     $placeId = $stmt->fetchAll();
-    $placeId = $placeId[0];
+    $placeId = $placeId["places_id"];
     var_dump($placeId);
 
     $stmt = $db->prepare('SELECT users_id FROM users WHERE name = :username'); 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
 
     $userId = $stmt->fetchAll();
-    $userId = $userId[0];
+    $userId = $userId["users_id"];
     var_dump($userId);
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
