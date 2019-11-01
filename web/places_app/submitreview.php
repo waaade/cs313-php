@@ -28,17 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     $result = $stmt->fetch();
     $date = $result["current_date"];
-    var_dump($date);
+    var_dump($date); 
 
-    $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
+    $stmt = $db->prepare('INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
         :place, 
         :thedate,
         :username
         :score,
-        :comment)';
-
-    $stmt = $db->prepare($sql);
+        :comment)');
     
     $stmt->bindValue(':place', $placeId);
     $stmt->bindValue(':thedate', $date);
