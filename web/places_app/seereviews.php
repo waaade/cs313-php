@@ -34,7 +34,7 @@ $db = get_db();
     ?>
     <a href="home.php">Back</a>
     <?php
-    echo '<p>Coming soon: <a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
+    echo '<p><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
     ?>
     </div>
 </body>
