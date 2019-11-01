@@ -47,12 +47,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $date = $result["current_date"];
     var_dump($date); 
     
-    $db->query("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) VALUES
-        ( $placeId
-        , '$date'
-        , $score
-        , '$comment'
-        )");
+    $stmt = $db->prepare('INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) 
+    VALUES (
+        :place, 
+        :thedate,
+        :username
+        :score,
+        :comment)');
+    
+    $stmt->bindParam(':place', $placeId);
+    $stmt->bindParam(':thedate', $date);
+    $stmt->bindParam(':username', $userId);
+    $stmt->bindParam(':score', $score);
+    $stmt->bindParam(':comment', $comment);
+    
+    $stmt->execute();
 
 }
 ?>
