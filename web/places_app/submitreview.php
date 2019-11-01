@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':comment', $comment);
     
     $stmt->execute();
+    print ($this->pdo->lastInsertId('reviews_id'));
 
 }
 ?>
