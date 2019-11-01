@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $db->query("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) VALUES
         ( $placeId
-        , $date
+        , '$date'
         , $score
-        , $comment
+        , '$comment'
         )");
 
 }
