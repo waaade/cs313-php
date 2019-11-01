@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         :score,
         :comment)';
 
-    $stmt = $this->pdo->prepare($sql);
+    $stmt = $db->prepare($sql);
     
     $stmt->bindValue(':place', $placeId);
     $stmt->bindValue(':thedate', $date);
@@ -47,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':comment', $comment);
     
     $stmt->execute();
-    print ($this->pdo->lastInsertId('reviews_id'));
 
 }
 ?>
