@@ -29,22 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->fetch();
     $date = $result["current_date"];
     var_dump($date); 
-
-    $stmt = $db->prepare('INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) 
-    VALUES (
-        :place, 
-        :thedate,
-        :username
-        :score,
-        :comment)');
     
-    $stmt->bindValue(':place', $placeId);
-    $stmt->bindValue(':thedate', $date);
-    $stmt->bindValue(':username', $userId);
-    $stmt->bindValue(':score', $score);
-    $stmt->bindValue(':comment', $comment);
-    
-    $stmt->execute();
+    $db->query("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) VALUES
+        ( $placeId
+        , '$date'
+        , $score
+        , '$comment'
+        )");
 
 }
 ?>
