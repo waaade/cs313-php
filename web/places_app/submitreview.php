@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
         :place, 
-        :date,
+        :thedate,
         :username
         :score,
         :comment)';
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $this->pdo->prepare($sql);
     
     $stmt->bindValue(':place', $placeId);
-    $stmt->bindValue(':date', $date);
+    $stmt->bindValue(':thedate', $date);
     $stmt->bindValue(':username', $userId);
     $stmt->bindValue(':score', $score);
     $stmt->bindValue(':comment', $comment);
