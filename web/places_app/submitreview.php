@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $date = $result["current_date"];
     var_dump($date); 
 
-    $stmt = $db->prepare('INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
+    $stmt = $db->prepare('INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) 
     VALUES (
         :place, 
         :thedate,
