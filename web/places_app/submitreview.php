@@ -23,10 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->fetch();
     $userId = $result["users_id"];
     var_dump($userId);
+
+    $stmt = $db->prepare('SELECT CURRENT_DATE');
+    $stmt->execute();
+    $date = $stmt->fetch();
+    var_dump($date);
+
     $sql = 'INSERT INTO reviews(place, reviews_date, reviews_user, score, comment) 
     VALUES (
         :place, 
-        (SELECT CURRENT_DATE),
+        :date,
         :username
         :score,
         :comment)';
@@ -34,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $this->pdo->prepare($sql);
     
     $stmt->bindValue(':place', $placeId);
-    
+    $stmt->bindValue(':date', $date);
     $stmt->bindValue(':username', $userId);
     $stmt->bindValue(':score', $score);
     $stmt->bindValue(':comment', $comment);
