@@ -19,7 +19,6 @@ $db = get_db();
 <body>
     <h1>Rexburg Places</h1>
     <div>
-    <h3>Reviews for selected location</h3>
     <?php
         $id = htmlspecialchars(trim($_GET['placeid']));
 
@@ -30,7 +29,7 @@ $db = get_db();
 
         $name= $stmt->fetchAll();
         foreach ($name as $row) {
-            echo '<h3>Reviews for ' . $row['name'] . '<br>';
+            echo '<h3>Reviews for ' . $row['name'] . '</h3><br>';
         }
 
         $stmt = $db->prepare('SELECT * FROM reviews WHERE place=:id');
