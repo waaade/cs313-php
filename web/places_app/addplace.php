@@ -36,7 +36,7 @@ $db = get_db();
         <input type="radio" name="type" value="Recreation" required>Recreation
         <input type="radio" name="type" value="Stores" required>Store<br>
         Address: (optional)<input type="text" name="address"><br>
-        Phone: (optional)<input type="phone" name="phone"><br>
+        Phone: (optional) Please enter without dashes. e.g. 2081234567 <input type="phone" name="phone"><br>
 
         <input type="submit" value="Submit">
         <?php
@@ -46,6 +46,7 @@ $db = get_db();
             echo "<p>You need to be logged in to add a place.</p><a href=login.php>Log in now</a>";
         }
         ?>
+        <br><a href="home.php">Back</a>
         </div>
     </body>
 </html>

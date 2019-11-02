@@ -27,6 +27,7 @@ $db = get_db();
         Username: <input type="text" name="name" required><br>
         Password: <input type="text" name="password" required><br>
         <input type="submit" value="Submit">
+        <br><a href="home.php">Back</a>
         </div>
     </body>
 </html>

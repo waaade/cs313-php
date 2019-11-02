@@ -27,7 +27,6 @@ session_start();
             <input type="radio" name="type" value="Stores">Stores<br>
             <input type="submit" value="Go">
         </form>
-        <br>
         <h2>Search for a Place by name</h2>
         <form action="namesearch.php" method="post">
             Enter name: <input type="text" name="search">

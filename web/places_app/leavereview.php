@@ -29,7 +29,7 @@ $db = get_db();
 
         $name= $stmt->fetchAll();
         foreach ($name as $row) {
-            echo '<h3>Leave Review for ' . $row['name'] . '</h3><br>';
+            echo '<h3>Leave Review for ' . $row['name'] . '</h3>';
             $theName = $row['name'];
         }
         ?>
