@@ -18,6 +18,7 @@ session_start();
 <body>
 <?php
 $_SESSION['loggedin'] = false;
+$_SESSION['currentuser'] = "guest"; //Paranoid
 ?>
     <h1>Rexburg Places</h1>
     <div>

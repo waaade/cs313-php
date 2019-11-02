@@ -42,9 +42,6 @@ $db = get_db();
         foreach ($reviews as $row) {
             echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p><br>';
         }
-    ?>
-    <a href="home.php">Back</a>
-    <?php
     if ($_SESSION['loggedin'])
     {
         echo '<h4><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></h4>';
@@ -55,6 +52,7 @@ $db = get_db();
     }
     
     ?>
+    <a href="home.php">Back</a>
     </div>
 </body>
 </html>

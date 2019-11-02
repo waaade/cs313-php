@@ -36,8 +36,11 @@ session_start();
         <?php
             if ($_SESSION['loggedin'])
             {
+                
+
+                echo "<h4>Welcome Back, " . $_SESSION['currentuser'] . "!</h4>";
                 ?>
-                <h4>Welcome Back!</h4><h3><a href="addplace.php">Add a new place</a></h3>
+                <h3><a href="addplace.php">Add a new place</a></h3>
                 <a href="logout.php">Log out</a>
                 <?php
             }
@@ -48,7 +51,7 @@ session_start();
         <h2>Create an Account and Add Places</h2>
         <p>Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
         <a href="createaccount.php">Create an account</a> and start contributing today!</p>
-        <a href="login.php">Log in to your account</a>
+        <h4><a href="login.php">Log in to your account</a></h4>
         <?php
             }
             ?>

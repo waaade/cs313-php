@@ -37,7 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($correct)
     {
         $_SESSION['loggedin'] = true;
-        echo "<p>You have succesfully logged in. Welcome back!</p>";
+        $_SESSION['currentuser'] = $username;
+        echo "<h3>" . $username . ", you have succesfully logged in.</h3><p>Welcome back!</p>";
     }
     else
     {
