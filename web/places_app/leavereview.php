@@ -38,7 +38,7 @@ $db = get_db();
         <?php echo 'Place: <input type="text" name="name" value="' . $theName . '" readonly><br>';?>
         Enter a rating (between 1 and 5):<br>
         <input type="number" name="rating" min="1" max="5" required><br>
-        Leave your thoughts:<br><textarea name="content" id="content" required></textarea><br>
+        Leave your thoughts:<br><textarea rows="4" cols="50" name="content" id="content" required></textarea><br>
         <input type="submit" value="Submit">
         </form>
         </div>
