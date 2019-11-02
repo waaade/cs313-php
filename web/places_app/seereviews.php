@@ -30,7 +30,7 @@ $db = get_db();
 
         $name= $stmt->fetchAll();
         foreach ($name as $row) {
-            echo '<h3>Reviews for ' . $row['name'] . '</h3><br>';
+            echo '<h3>Reviews for ' . $row['name'] . '</h3>';
         }
 
         $stmt = $db->prepare('SELECT * FROM reviews WHERE place=:id');
@@ -47,11 +47,11 @@ $db = get_db();
     <?php
     if ($_SESSION['loggedin'])
     {
-        echo '<p><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
+        echo '<h4><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></h4>';
     }
     else
     {
-        echo '<p><a href="login.php">Login to submit a review</a></p>';
+        echo '<p><a href="login.php">Log in to submit a review</a></p>';
     }
     
     ?>

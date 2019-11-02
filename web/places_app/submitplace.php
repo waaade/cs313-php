@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <h1>Rexburg Places</h1>
     <div>
-    <p>Thank you. Your review has been submitted.</p>
+    <h3>Thank you!</h3><p>You have added a place to the database. Now you and others can eave a review!</p>
     <a href=home.php>Back</a>
     </div>
 </body>

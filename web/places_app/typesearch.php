@@ -30,7 +30,7 @@ $db = get_db();
         '<br><a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>
-<p><a href="home.php">Back</a></p>
+<hr><p><a href="home.php">Back</a></p>
 </div>
 </body>
 </html>
