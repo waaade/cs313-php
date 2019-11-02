@@ -46,7 +46,7 @@ $db = get_db();
             $stmt2->bindValue(':userId', $row['reviews_user']);
             $stmt2->execute();
             $user = $stmt2->fetch();
-            echo '<p>Review by: ' . $user["name"] . '</p><br>';
+            echo '<p>Review by: ' . $user["name"] . '</p>';
         }
     if ($_SESSION['loggedin'])
     {

@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Rexburg Places</h1>
     <div>
     <h3>Thank you!</h3> <p>Your account is now live and you are logged in.</p>
-    <a href=home.php>Back</a>
+    <a href=home.php>Start adding places and reviews now</a>
     </div>
 </body>
 </html>
