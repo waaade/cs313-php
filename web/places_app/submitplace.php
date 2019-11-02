@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $stmt->bindValue(':typesId', $typesId);
     $stmt->bindValue(':phone', $phone);
+    $stmt->bindValue(':address', $address);
     $stmt->bindValue(':name', $name);
     
     $stmt->execute();
