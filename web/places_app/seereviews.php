@@ -22,6 +22,17 @@ $db = get_db();
     <h3>Reviews for selected location</h3>
     <?php
         $id = htmlspecialchars(trim($_GET['placeid']));
+
+        $stmt = $db->prepare('SELECT name FROM places WHERE places_id=:id');
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $name = "";
+
+        $name= $stmt->fetchAll();
+        foreach ($name as $row) {
+            echo '<h3>Reviews for ' . $row['name'] . '<br>';
+        }
+
         $stmt = $db->prepare('SELECT * FROM reviews WHERE place=:id');
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -29,7 +40,7 @@ $db = get_db();
         $reviews = $stmt->fetchAll();
         
         foreach ($reviews as $row) {
-            echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '/5<br><p>' . $row['comment'] . '<p><br>';
+            echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p><br>';
         }
     ?>
     <a href="home.php">Back</a>

@@ -67,5 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
     <h1>Rexburg Places</h1>
+    <div>
+    <p>Thank you. Your review has been submitted.</p>
 </body>
 </html>
