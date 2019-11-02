@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $hashed = password_hash($password);
+    $hashed = password_hash($password, PASSWORD_DEFAULT);
 
     var_dump($hashed);
     
