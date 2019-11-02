@@ -29,15 +29,15 @@ $db = get_db();
 
         $name= $stmt->fetchAll();
         foreach ($name as $row) {
-            echo 'Leave Review for ' . $row['name'] . '<br>';
+            echo '<h3>Leave Review for ' . $row['name'] . '</h3><br>';
             $theName = $row['name'];
         }
         ?>
         
         <form action="submitreview.php" method="POST">
-        <?php echo '<input type="text" name="name" value="' . $theName . '" readonly><br>';?>
+        <?php echo 'Place: <input type="text" name="name" value="' . $theName . '" readonly><br>';?>
         Enter a rating (between 1 and 5):<br>
-        <input type="number" name="rating" min="1" max="5"><br>
+        <input type="number" name="rating" min="1" max="5" required><br>
         Leave your thoughts:<br><textarea name="content" id="content" required></textarea><br>
         <input type="submit" value="Submit">
         </form>

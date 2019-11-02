@@ -19,7 +19,13 @@ $db = get_db();
     <body>
         <h1>Rexburg Places</h1>
         <div>
-        <p>You will be able to create an account here.</p>
+        <h3>Create Account</h3>
+        <p>With an account, you'll be able to add places and reviews.</p>
+        <form action="newaccount.php" method="POST">
+        Your Email: <input type="text" name="email" required><br>
+        Username: <input type="text" name="name" required><br>
+        Password: <input type="text" name="password" required><br>
+        <input type="submit" value="Submit">
         </div>
     </body>
 </html>
