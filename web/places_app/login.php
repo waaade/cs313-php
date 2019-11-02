@@ -34,6 +34,7 @@ $db = get_db();
         <input type="submit" value="Login">
         </form>
         <p>Don't have an account? <a href="createaccount.php">Create one</a></p>
+        <a href="home.php">Back</a>
         <?php
             }
             ?>

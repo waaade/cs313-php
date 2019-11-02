@@ -1,18 +1,36 @@
 body {
-    background-color: skyblue;
+    background-color: rgb(57, 109, 66);
 }
 
 div {
-    background-color: white;
-    margin: 2%;
+    background-color: rgb(247, 240, 201);
+    margin: 1%;
 }
 
 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: wheat;
+    font-weight: bolder;
 }
 
 #desc {
     text-align: center;
     color: white;
+    font-weight: bold;
 }
+
+form {
+    text-align: center;
+    margin: 1%;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
