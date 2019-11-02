@@ -18,33 +18,37 @@ $db = get_db();
     <title>Rexburg Places</title>
 </head>
 <body>
+<h1>Rexburg Places</h1>
+    <div>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $username = $_POST["name"];
-    $email = $_POST["email"];
     $password = $_POST["password"];
-    $hashed = password_hash($password, PASSWORD_DEFAULT);
-    
-    $stmt = $db->prepare("INSERT INTO users (email, password, name) 
-    VALUES (
-        :email, 
-        :pass,
-        :username
-        )");
-    
-    $stmt->bindValue(':email', $email);
-    $stmt->bindValue(':pass', $hashed);
+
+    $stmt = $db->prepare('SELECT password FROM users WHERE name = :username');
     $stmt->bindValue(':username', $username);
-    
     $stmt->execute();
-    $_SESSION['loggedin'] = true;
+
+    $result = $stmt->fetch();
+    $hashed = $result["password"];
+    $correct = password_verify($password, $hashed);
+
+    if ($correct)
+    {
+        $_SESSION['loggedin'] = true;
+        echo "<p>You have succesfully logged in.</p>";
+    }
+    else
+    {
+        echo "<p>Incorrect username or password.</p><a href='login.php'>Try Again.</a>";
+    }
+    
+    
 }
 ?>
 
-    <h1>Rexburg Places</h1>
-    <div>
-    <p>Thank you! Your account is now live and you are logged in.</p>
+    
     <a href=home.php>Back</a>
     </div>
 </body>
