@@ -26,7 +26,7 @@ $db = get_db();
     foreach ($db->query("SELECT * FROM places 
     WHERE places_type=(SELECT types_id FROM types WHERE name='$type')", PDO::FETCH_ASSOC) as $row)
     {
-        echo '<h4>' . $row['name'] . '</h4>' . $row['address'] . '<br>' . $row['phone'] .
+        echo '<h4>' . $row['name'] . '</h4>' . $row['address'] . '<br>Phone: ' . $row['phone'] .
         '<br><a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>

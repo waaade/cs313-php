@@ -25,7 +25,7 @@ $db = get_db();
     $name = htmlspecialchars(trim($_POST['search']));
     foreach ($db->query("SELECT * FROM places WHERE name ILIKE '$name'", PDO::FETCH_ASSOC) as $row)
     {
-        echo '<h4>' . $row['name'] . '</h4>' . $row['address'] . '<br>' . $row['phone'] .
+        echo '<h4>' . $row['name'] . '</h4>' . $row['address'] . '<br>Phone: ' . $row['phone'] .
         '<br><a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>
