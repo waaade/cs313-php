@@ -30,7 +30,7 @@ $db = get_db();
         <h3>Login</h3>
         <form action="loginhandler.php" method="POST">
         Username: <input type="text" name="name" required><br>
-        Password: <input type="submit" name="password" required><br>
+        Password: <input type="password" name="password" required><br>
         <input type="submit" value="Login">
         </form>
         <?php
