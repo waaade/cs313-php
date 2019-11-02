@@ -29,13 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $db->prepare("INSERT INTO users (email, password, name) 
     VALUES (
         :email, 
-        :password,
-        :name
+        :pass,
+        :username
         )");
     
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $hashed);
-    $stmt->bindParam(':name', $username);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':password', $hashed);
+    $stmt->bindValue(':username', $username);
     
     $stmt->execute();
     $_SESSION['loggedin'] = true;
