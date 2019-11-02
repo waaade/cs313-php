@@ -23,8 +23,8 @@ $db = get_db();
 <h3>Results of your search</h3>
 <?php
     $name = htmlspecialchars(trim($_POST['search']));
-    $name = '%' . $name;
-    foreach ($db->query("SELECT * FROM places WHERE name LIKE '$name'", PDO::FETCH_ASSOC) as $row)
+    $search = '%' . $name;
+    foreach ($db->query("SELECT * FROM places WHERE name LIKE '$search'", PDO::FETCH_ASSOC) as $row)
     {
         echo '<h4>' . $row['name'] . '</h4>' . $row['address'] . '<br>' . $row['phone'] .
         '<br><a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
