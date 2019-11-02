@@ -37,9 +37,9 @@ session_start();
             {
                 
 
-                echo "<h4>Welcome back, " . $_SESSION['currentuser'] . "!</h4>";
+                echo "<h4 class='text-center'>Welcome back, " . $_SESSION['currentuser'] . "!</h4>";
                 ?>
-                <h3><a href="addplace.php">Add a new place</a></h3>
+                <h3><a href="addplace.php" class="text-center">Add a new place</a></h3>
                 <a href="logout.php">Log out</a>
                 <?php
             }
@@ -49,9 +49,9 @@ session_start();
             ?>
         <hr>
         <h2>Create an Account and Add Places</h2>
-        <p>Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
+        <p class="text-center">Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
         <a href="createaccount.php">Create an account</a> and start contributing today!</p>
-        <h4><a href="login.php">Log in to your account</a></h4>
+        <h4 class="text-center"><a href="login.php">Log in to your account</a></h4>
         <?php
             }
             ?>
