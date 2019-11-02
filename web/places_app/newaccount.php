@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         )");
     
     $stmt->bindValue(':email', $email);
-    $stmt->bindValue(':password', $hashed);
+    $stmt->bindValue(':pass', $hashed);
     $stmt->bindValue(':username', $username);
     
     $stmt->execute();
