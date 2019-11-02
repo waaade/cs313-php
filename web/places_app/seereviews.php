@@ -37,10 +37,16 @@ $db = get_db();
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
+        $stmt2 = $db->prepare('SELECT name FROM users WHERE users_id = :userId');
+
         $reviews = $stmt->fetchAll();
         
         foreach ($reviews as $row) {
-            echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p><br>';
+            echo $row['reviews_date'] . '<br>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p>';
+            $stmt2->bindValues(':userId', $row['reviews_user']);
+            $stmt2->execute();
+            $user = $stmt2->fetch();
+            echo '<p>Review by: ' . $user["name"] . '</p><br>';
         }
     if ($_SESSION['loggedin'])
     {
