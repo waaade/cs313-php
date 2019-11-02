@@ -39,12 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $stmt->execute();
     $_SESSION['loggedin'] = true;
+    $_SESSION['currentaccount'] = $username;
 }
 ?>
 
     <h1>Rexburg Places</h1>
     <div>
-    <p>Thank you! Your account is now live and you are logged in.</p>
+    <h3>Thank you!</h3> <p>Your account is now live and you are logged in.</p>
     <a href=home.php>Back</a>
     </div>
 </body>

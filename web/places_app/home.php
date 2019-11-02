@@ -37,7 +37,7 @@ session_start();
             {
                 
 
-                echo "<h4>Welcome Back, " . $_SESSION['currentuser'] . "!</h4>";
+                echo "<h4>Welcome back, " . $_SESSION['currentuser'] . "!</h4>";
                 ?>
                 <h3><a href="addplace.php">Add a new place</a></h3>
                 <a href="logout.php">Log out</a>
