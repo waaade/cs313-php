@@ -29,16 +29,16 @@ $db = get_db();
         <p>To add a Rexburg place, you'll need to provide a name and a category. You can also add an
         address and phone number. Once a place has been added, you and others can write reviews.</p>
         <form action="submitplace.php" method="POST">
-        Name of Place (somewhere in or near Rexburg you've been!):<br> <input type="text" name="name" required><br>
+        Name of Place<br> (somewhere in or near Rexburg you've been!):<br> Place name:<input type="text" name="name" required><br>
         Type:<br>
         <input type="radio" name="type" value="Restaurants" required>Restaurant
         <input type="radio" name="type" value="Parks/Trails" required>Park/Trail<br>
         <input type="radio" name="type" value="Recreation" required>Recreation
         <input type="radio" name="type" value="Stores" required>Store<br>
-        Address: (optional)<br><input type="text" name="address"><br>
-        Phone: (optional) Please enter without dashes. e.g. 2081234567<br> <input type="phone" name="phone"><br>
-
+        Address: (optional)<input type="text" name="address"><br>
+        Phone: (optional) Please enter without dashes. e.g. 2081234567<br>Phone:<input type="phone" name="phone"><br>
         <input type="submit" value="Submit">
+        </form>
         <?php
         }
         else
