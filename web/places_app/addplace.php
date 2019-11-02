@@ -31,12 +31,12 @@ $db = get_db();
         <form action="submitplace.php" method="POST">
         Name of Place (somewhere in or near Rexburg you've been!): <input type="text" name="name" required><br>
         Type:<br>
-        <input type="radio" name="type" value="Restaurants" required>Restaurants
-        <input type="radio" name="type" value="Parks/Trails" required>Parks/Trails<br>
+        <input type="radio" name="type" value="Restaurants" required>Restaurant
+        <input type="radio" name="type" value="Parks/Trails" required>Park/Trail<br>
         <input type="radio" name="type" value="Recreation" required>Recreation
-        <input type="radio" name="type" value="Stores" required>Stores<br>
-        Address: (optional)<input type="text" name="address">
-        Phone: (optional)<input type="phone" name="phone">
+        <input type="radio" name="type" value="Stores" required>Store<br>
+        Address: (optional)<input type="text" name="address"><br>
+        Phone: (optional)<input type="phone" name="phone"><br>
 
         <input type="submit" value="Submit">
         <?php

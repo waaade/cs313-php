@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $type = $_POST['type'];
     $address = $_POST['address'];
-    $_phone = $_POST['phone'];
+    $phone = $_POST['phone'];
 
     $stmt = $db->prepare('SELECT types_id FROM types WHERE name = :type');
     $stmt->bindValue(':type', $type);
@@ -41,11 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         :name
         )");
     
-    $stmt->bindValue(':place', $placeId);
-    $stmt->bindValue(':thedate', $date);
-    $stmt->bindValue(':username', $userId);
-    $stmt->bindValue(':score', $score);
-    $stmt->bindValue(':comment', $comment);
+    $stmt->bindValue(':typesId', $typesId);
+    $stmt->bindValue(':phone', $phone);
+    $stmt->bindValue(':name', $name);
     
     $stmt->execute();
 

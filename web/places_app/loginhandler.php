@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($correct)
     {
         $_SESSION['loggedin'] = true;
-        echo "<p>You have succesfully logged in.</p>";
+        echo "<p>You have succesfully logged in. Welcome back!</p>";
     }
     else
     {
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
     
-    <a href=home.php>Back to main page</a>
+    <br><a href=home.php>Back to main page</a>
     </div>
 </body>
 </html>
