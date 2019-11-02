@@ -18,38 +18,44 @@ $db = get_db();
     <title>Rexburg Places</title>
 </head>
 <body>
-<h1>Rexburg Places</h1>
-    <div>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $username = $_POST["name"];
-    $password = $_POST["password"];
+    $name = $_POST['name'];
+    $type = $_POST['type'];
+    $address = $_POST['address'];
+    $_phone = $_POST['phone'];
 
-    $stmt = $db->prepare('SELECT password FROM users WHERE name = :username');
-    $stmt->bindValue(':username', $username);
+    $stmt = $db->prepare('SELECT types_id FROM types WHERE name = :type');
+    $stmt->bindValue(':type', $type);
     $stmt->execute();
 
     $result = $stmt->fetch();
-    $hashed = $result["password"];
-    $correct = password_verify($password, $hashed);
+    $typesId = $result["types_id"];
+    
+    $stmt = $db->prepare("INSERT INTO places (places_type, phone, address, name) 
+    VALUES (
+        :typesId, 
+        :phone,
+        :address,
+        :name
+        )");
+    
+    $stmt->bindValue(':place', $placeId);
+    $stmt->bindValue(':thedate', $date);
+    $stmt->bindValue(':username', $userId);
+    $stmt->bindValue(':score', $score);
+    $stmt->bindValue(':comment', $comment);
+    
+    $stmt->execute();
 
-    if ($correct)
-    {
-        $_SESSION['loggedin'] = true;
-        echo "<p>You have succesfully logged in.</p>";
-    }
-    else
-    {
-        echo "<p>Incorrect username or password.</p><a href='login.php'>Try Again.</a>";
-    }
-    
-    
 }
 ?>
 
-    
-    <a href=home.php>Back to main page</a>
+    <h1>Rexburg Places</h1>
+    <div>
+    <p>Thank you. Your review has been submitted.</p>
+    <a href=home.php>Back</a>
     </div>
 </body>
 </html>

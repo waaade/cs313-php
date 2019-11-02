@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $result = $stmt->fetch();
     $placeId = $result["places_id"];
-    var_dump($placeId);
 
     $stmt = $db->prepare('SELECT users_id FROM users WHERE name = :username'); 
     $stmt->bindValue(':username', $username);
@@ -40,13 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $result = $stmt->fetch();
     $userId = $result["users_id"];
-    var_dump($userId);
 
     $stmt = $db->prepare('SELECT CURRENT_DATE');
     $stmt->execute();
     $result = $stmt->fetch();
-    $date = $result["current_date"];
-    var_dump($date); 
+    $date = $result["current_date"]; 
     
     $stmt = $db->prepare("INSERT INTO reviews (place, reviews_date, reviews_user, score, comment) 
     VALUES (

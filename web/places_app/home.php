@@ -37,7 +37,8 @@ session_start();
             if ($_SESSION['loggedin'])
             {
                 ?>
-                <p>Welcome Back!</p><br> <a href="addplace.php">Add a new place</a>
+                <h4>Welcome Back!</h4><a href="addplace.php">Add a new place</a><br>
+                <a href="logout.php">Log out</a>
                 <?php
             }
             else
