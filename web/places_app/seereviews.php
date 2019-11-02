@@ -42,7 +42,7 @@ $db = get_db();
         $reviews = $stmt->fetchAll();
         
         foreach ($reviews as $row) {
-            echo '<h5>' . $row['reviews_date'] . '</h5>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p>';
+            echo '<hr><h5>' . $row['reviews_date'] . '</h5>Score: ' . $row['score'] . '/5<p>' . $row['comment'] . '</p>';
             $stmt2->bindValue(':userId', $row['reviews_user']);
             $stmt2->execute();
             $user = $stmt2->fetch();
