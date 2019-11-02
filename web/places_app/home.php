@@ -32,7 +32,6 @@ session_start();
             Enter name: <input type="text" name="search">
             <input type="submit" value="Go">
         </form>
-        <hr>
         <?php
             if ($_SESSION['loggedin'])
             {
@@ -40,6 +39,7 @@ session_start();
 
                 echo "<h4 class='text-center'>Welcome back, " . $_SESSION['currentuser'] . "!</h4>";
                 ?>
+                <hr>
                 <h3 class="text-center"><a href="addplace.php">Add a new place</a></h3>
                 <a href="logout.php">Log out</a>
                 <?php

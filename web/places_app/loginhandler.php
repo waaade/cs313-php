@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else
     {
-        echo "<p>Incorrect username or password.</p><a href='login.php'>Try Again.</a>";
+        echo "<h2>Oh no</h2><p>Incorrect username or password.</p><a href='login.php'>Try Again</a>";
     }
     
     
