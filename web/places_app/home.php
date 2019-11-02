@@ -32,6 +32,7 @@ session_start();
             Enter name: <input type="text" name="search">
             <input type="submit" value="Go">
         </form>
+        <hr>
         <?php
             if ($_SESSION['loggedin'])
             {
@@ -39,7 +40,7 @@ session_start();
 
                 echo "<h4 class='text-center'>Welcome back, " . $_SESSION['currentuser'] . "!</h4>";
                 ?>
-                <h3><a href="addplace.php" class="text-center">Add a new place</a></h3>
+                <h3 class="text-center"><a href="addplace.php">Add a new place</a></h3>
                 <a href="logout.php">Log out</a>
                 <?php
             }
@@ -48,7 +49,7 @@ session_start();
 
             ?>
         <hr>
-        <h2>Create an Account and Add Places</h2>
+        <h2>Create an account and add Places</h2>
         <p class="text-center">Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
         <a href="createaccount.php">Create an account</a> and start contributing today!</p>
         <h4 class="text-center"><a href="login.php">Log in to your account</a></h4>

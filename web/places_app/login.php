@@ -27,7 +27,7 @@ $db = get_db();
             else {
 
             ?>
-        <h3>Login</h3>
+        <h3 class="text-center">Login</h3>
         <form action="loginhandler.php" method="POST">
         Username: <input type="text" name="name" required><br>
         Password: <input type="password" name="password" required><br>
