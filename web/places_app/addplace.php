@@ -46,7 +46,7 @@ $db = get_db();
             echo "<p>You need to be logged in to add a place.</p><a href=login.php>Log in now</a>";
         }
         ?>
-        <br><a href="home.php">Back</a>
+        <br><p><a href="home.php">Back</a></p>
         </div>
     </body>
 </html>
