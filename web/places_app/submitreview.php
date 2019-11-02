@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $score = (is_numeric($_POST["rating"]) ? (int)$_POST["rating"] : 0);
     $comment = $_POST["content"];
     $place = $_POST["name"];
-    $username = 'johnny';
+    $username = $_SESSION["currentuser"];
 
     $stmt = $db->prepare('SELECT places_id FROM places WHERE name = :place');
     $stmt->bindValue(':place', $place);
