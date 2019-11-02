@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $stmt->execute();
     $_SESSION['loggedin'] = true;
-    $_SESSION['currentaccount'] = $username;
+    $_SESSION['currentuser'] = $username;
 }
 ?>
 
