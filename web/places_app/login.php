@@ -33,6 +33,7 @@ $db = get_db();
         Password: <input type="password" name="password" required><br>
         <input type="submit" value="Login">
         </form>
+        <p>Don't have an account? <a href="createaccount.php">Create one</a></p>
         <?php
             }
             ?>

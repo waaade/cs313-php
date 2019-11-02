@@ -33,10 +33,24 @@ session_start();
             Enter name: <input type="text" name="search">
             <input type="submit" value="Go">
         </form>
+        <?php
+            if ($_SESSION['loggedin'])
+            {
+                ?>
+                <p>Welcome Back!</p><br> <a href="addplace.php">Add a new place</a>
+                <?php
+            }
+            else
+            {
+
+            ?>
         <h2>Create an Account and Add Places</h2>
         <p>Want to leave your thoughts on a place? Is there a place you know about that isn't in our database? 
         <a href="createaccount.php">Create an account</a> and start contributing today!</p>
         <a href="login.php">Login to your account</a>
+        <?php
+            }
+            ?>
         </div>
     </body>
 </html>

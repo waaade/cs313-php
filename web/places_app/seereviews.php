@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "dbConnect.php";
 $db = get_db();
 ?>
@@ -44,7 +45,15 @@ $db = get_db();
     ?>
     <a href="home.php">Back</a>
     <?php
-    echo '<p><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
+    if ($_SESSION['loggedin'])
+    {
+        echo '<p><a href="leavereview.php?placeid=' . $id . '">Leave a review</a></p>';
+    }
+    else
+    {
+        echo '<p><a href="login.php">Login to submit a review</a></p>';
+    }
+    
     ?>
     </div>
 </body>
