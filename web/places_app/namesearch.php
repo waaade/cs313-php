@@ -29,6 +29,7 @@ $db = get_db();
         '<br><a href="seereviews.php?placeid=' . $row['places_id'] . '">See Reviews</a><br>';
     }
 ?>
+<p>Can't find it? <a href="addplace.php">Submit it yourself!</a></p>
 <hr><p><a href="home.php">Back</a></p>
 </div>
 </body>
